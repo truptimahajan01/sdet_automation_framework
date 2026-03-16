@@ -1,0 +1,16 @@
+environments:
+  staging:
+    base_url: "https://staging.example.com"
+    api_base_url: "https://api.staging.example.com"
+  prod:
+    base_url: "https://example.com"
+    api_base_url: "https://api.example.com"
+
+browser:
+  name: "chrome"
+  headless: false
+  implicit_wait: 10
+  page_load_timeout: 30
+
+test_data:
+  default_user: "test_user@example.com"
