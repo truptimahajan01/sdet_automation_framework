@@ -1,8 +1,2 @@
-def test_addition():
-    assert 2 + 2 == 4
-
-def test_string():
-    assert "hello".upper() == "HELLO"
-
-def test_list():
-    assert len([1, 2, 3]) == 2
+def test_data_read(test_data):
+    assert len(test_data) == 2
