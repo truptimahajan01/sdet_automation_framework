@@ -7,3 +7,8 @@ def test_user():
         "email": "user@example.com",
         "password": "123456"
     }
+
+@pytest.fixture(scope="session")
+def browser():
+    driver = "ChromeDriver"   # dummy value
+    yield driver
