@@ -59,3 +59,18 @@ Never commit `.env` files — copy `.env.example` and fill in secrets locally.
 
 ## Contributing
 See `CONTRIBUTING.md` for branching strategy and PR guidelines.
+
+## 🚀 How to Run Tests
+
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Run tests:
+   pytest
+
+3. Run with specific env:
+   export TEST_ENV=staging
+   pytest
+
+4. View report:
+   open reports/report.html

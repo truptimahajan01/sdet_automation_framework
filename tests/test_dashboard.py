@@ -11,3 +11,4 @@ def test_dashboard_title(browser):
 def test_dashboard_not_none(browser):
     dashboard = DashboardPage(browser)
     assert dashboard.get_title() is not None
+
