@@ -24,3 +24,10 @@ def pytest_runtest_makereport(item, call):
 
 def pytest_configure(config):
     print("\nStarting Test Execution...")
+
+@pytest.fixture
+def auth_headers():
+    return {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+    }
