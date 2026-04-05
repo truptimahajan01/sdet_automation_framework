@@ -74,3 +74,17 @@ See `CONTRIBUTING.md` for branching strategy and PR guidelines.
 
 4. View report:
    open reports/report.html
+
+## 🐳 Run Tests using Docker
+
+### Build & Run
+docker compose up --build
+
+### Stop
+docker compose down
+
+### Run without rebuild
+docker compose up
+
+### View logs
+docker compose logs

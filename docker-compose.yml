@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  test-runner:
+    build: .
+    container_name: sdet-tests
+    command: pytest && echo "All tests passed"
