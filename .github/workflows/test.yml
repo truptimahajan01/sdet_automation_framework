@@ -17,16 +17,17 @@ jobs:
           with:
             python-version: '3.11'
 
-        -name: Install dependencies
-         run: |
-            pip install -r requirement.txt
+        - name: Install dependencies
+          run: |
+            pip install -r requirements.txt
 
-        -name: Run pytest
-         run: |
+
+        - name: Run pytest
+          run: |
             pytest --alluredir = allure-results
 
-        -name: Upload Allure results
-         uses: actions/upload-artifact@v4
-         with:
+        - name: Upload Allure results
+          uses: actions/upload-artifact@v4
+          with:
             name: allure-results
             path: allure-results
