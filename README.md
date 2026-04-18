@@ -88,3 +88,5 @@ docker compose up
 
 ### View logs
 docker compose logs
+
+![CI](https://github.com/<your-username>/<repo-name>/actions/workflows/test.yml/badge.svg)
