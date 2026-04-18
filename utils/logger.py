@@ -8,7 +8,7 @@ def get_logger(name="framework_logger"):
         stream_handler = logging.StreamHandler()
         stream_handler.setLevel(logging.INFO)
 
-        file_handler = logging.FileHandler(reports/framework.log")
+        file_handler = logging.FileHandler("reports/framework.log")
         file_handler.setLevel(logging.INFO)
 
         formatter = logging.Formatter(
