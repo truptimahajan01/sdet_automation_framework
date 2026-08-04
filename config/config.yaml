@@ -1,4 +1,11 @@
 staging:
-  base_url: "https://staging.example.com"
+  base_url: "https://jsonplaceholder.typicode.com"
+  ui_url: "https://www.saucedemo.com"
+  timeout: 30
+  headless: true
+
 prod:
-  base_url: "https://prod.example.com"
+  base_url: "https://jsonplaceholder.typicode.com"
+  ui_url: "https://www.saucedemo.com"
+  timeout: 30
+  headless: true

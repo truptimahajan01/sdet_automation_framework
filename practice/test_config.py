@@ -1,4 +1,2 @@
-from config.config_loader import load_config
-
-config = load_config()
-print(config["base_url"])
+# This folder contains early learning notes and is kept for reference only.
+# All framework code lives in: pages/, api/, tests/, utils/, config/

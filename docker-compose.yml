@@ -1,7 +1,10 @@
-version: "3.8"
-
 services:
   test-runner:
     build: .
     container_name: sdet-tests
-    command: pytest && echo "All tests passed"
+    environment:
+      - TEST_ENV=${TEST_ENV:-staging}
+    volumes:
+      - ./reports:/app/reports
+      - ./allure-results:/app/allure-results
+    command: pytest -m "api" -v --alluredir=allure-results --html=reports/report.html --self-contained-html

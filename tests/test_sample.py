@@ -1,26 +1,15 @@
 import pytest
-import sys
+from utils.data_reader import read_csv
 
-@pytest.mark.parametrize("text,expected", [
-    ("hello", "HELLO"),
-    ("bye", "BYE")
-])
 
-def test_string(text,expected):
-    assert text.upper() == expected
+@pytest.mark.parametrize("credentials", read_csv("data.csv"))
+def test_csv_credentials_have_valid_email(credentials):
+    """Verify test data CSV contains properly formatted email addresses."""
+    assert "@" in credentials["email"]
+    assert "." in credentials["email"]
 
-@pytest.mark.parametrize("a,b,expected", [
-    (2,2,4),
-    (3,3,6)
-])
 
-def test_addition(a,b,expected):
-    assert a + b == expected
-
-@pytest.mark.skipif(sys.platform == "linux", reason="Skipping on linux")
-def test_skip_example():
-    return True
-
-@pytest.mark.xfail(reason="Known bug in feature")
-def test_expected_failure():
-    assert 2 + 2 == 5
+@pytest.mark.parametrize("credentials", read_csv("data.csv"))
+def test_csv_credentials_have_password(credentials):
+    """Verify test data CSV contains non-empty passwords."""
+    assert len(credentials["password"]) >= 6
