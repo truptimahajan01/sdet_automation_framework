@@ -6,7 +6,6 @@
 [![pytest](https://img.shields.io/badge/pytest-8.x-orange.svg)](https://pytest.org)
 
 A personal learning project demonstrating Python-based test automation skills.
-Built as part of my transition from Manual QA (3.5 years) to SDET.
 
 UI tests run against [SauceDemo](https://www.saucedemo.com) and API tests run against [JSONPlaceholder](https://jsonplaceholder.typicode.com).
 
